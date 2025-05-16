@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
-      <Link className="navbar-brand fw-bold text-success" to="/">RecipeApp</Link>
+      <Link className="navbar-brand fw-bold text-success" to="/">Thyme Machine</Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
           <li className="nav-item"><Link className="nav-link" to="/">All</Link></li>
