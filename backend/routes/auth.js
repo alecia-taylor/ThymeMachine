@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require('express'); 
 const router = express.Router();
-const User = require('../models/User');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const User = require('../models/User'); // Import the User model
+const bcrypt = require('bcryptjs'); // Import bcrypt for password hashing
+const jwt = require('jsonwebtoken'); // Import jsonwebtoken for token generation
 
 // Middleware to check if the user is authenticated
 // This middleware checks if the request has a valid token
@@ -18,7 +18,7 @@ router.post('/register', async (req, res) => {
   } catch (err) {
     res.status(400).json({ error: 'Username already exists' });
   }
-});
+}); // Middleware to authenticate JWT tokens
 
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
@@ -30,6 +30,6 @@ router.post('/login', async (req, res) => {
 
   const token = jwt.sign({ id: user._id, username: user.username }, process.env.JWT_SECRET);
   res.json({ token });
-});
+}); // Middleware to authenticate JWT tokens
 
-module.exports = router;
+module.exports = router; 
