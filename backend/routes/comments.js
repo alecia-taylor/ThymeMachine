@@ -6,6 +6,6 @@ const {
 } = require('../controllers/commentController');
 
 router.get('/:recipeId', getCommentsByRecipe);
-router.post('/', addComment); 
+router.post('/', addComment);
 
 module.exports = router;
