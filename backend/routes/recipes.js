@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const recipeController = require('../controllers/recipeController');
+const recipeController = require('../controllers/recipeController.js');
 
 router.get('/', recipeController.getAllRecipes);
 router.get('/:id', recipeController.getRecipeById);
