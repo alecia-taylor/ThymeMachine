@@ -1,5 +1,7 @@
+// Description: This file contains the database connection using MongoDB
 const mongoose = require('mongoose');
 
+// Load environment variables from .env file
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);

@@ -1,3 +1,4 @@
+// Description: This file defines the Comment model schema
 const mongoose = require('mongoose');
 
 const CommentSchema = new mongoose.Schema({

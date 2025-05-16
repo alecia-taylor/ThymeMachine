@@ -1,3 +1,4 @@
+//Description: This file defines the Recipe model schema
 const mongoose = require('mongoose');
 
 const RecipeSchema = new mongoose.Schema({

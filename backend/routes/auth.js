@@ -4,6 +4,10 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+// Middleware to check if the user is authenticated
+// This middleware checks if the request has a valid token
+// If the token is valid, it adds the user information to the request object
+// If not, it sends a 401 Unauthorized response
 router.post('/register', async (req, res) => {
   try {
     const { username, password } = req.body;
